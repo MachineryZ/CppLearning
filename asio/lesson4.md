@@ -12,3 +12,4 @@ socket.async_receive_from(buffer, sender, [&] (boost::system::error_code error, 
     std::cout << "Message is received, message size is " << bytes_transferred;
 })
 ~~~
+s
