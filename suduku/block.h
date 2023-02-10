@@ -12,4 +12,6 @@ public:
 private:
     int _count;
     point_value_t *_numbers[MAX_COUNT];
-}
+};
+
+#endif
