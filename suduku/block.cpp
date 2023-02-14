@@ -22,5 +22,23 @@ bool CBlock::isValid() const {
 }
 
 bool CBlock::isFull() const {
-    
+    for (int i = 0; i < _count; ++i) {
+        point_value_t *p_point_value = _numbers[i];
+        if (nullptr == p_point_value || UNSELECTED == p_point_value->value)
+            return false;
+    }
+    return true;
+}
+
+void CBlock::print() const {
+    std::cout << "\u2503" << " ";
+    for (int i = 0; i < _count; ++i) {
+        auto number = *(_numbers[i]);
+        if (0 == number.value)
+            std::cout << " " << "\u2503";
+        else {
+            if (number.state == State::ERASED)
+                std::cout << Color/
+        }
+    } 
 }
